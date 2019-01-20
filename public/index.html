@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en" moznomarginboxes mozdisallowselectionprint>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#db3038">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/logo_square.png">
+    <link rel="icon" href="%PUBLIC_URL%/logo_square.png">
+    
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+    <!-- Google Font -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">  -->
+
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="%PUBLIC_URL%/bootstrap/css/bootstrap.min.css">
+
+    <!-- for printing -->
+    <!-- <link rel="stylesheet" media="print" href="%PUBLIC_URL%/bootstrap/css/bootstrap.min.css"> -->
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="%PUBLIC_URL%/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    
+    <!-- custom-design css -->
+    <link rel="stylesheet" href="%PUBLIC_URL%/custom.css">
+    
+    <!-- Theme style -->
+    <link rel="stylesheet" href="%PUBLIC_URL%/dist/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+     folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="%PUBLIC_URL%/dist/css/skins/_all-skins.min.css">
+
+    <title>RamroCV.com Portal</title>
+  </head>
+  <body>
+
+    <style>
+
+    .carousel-control {
+   
+    width: 8% !important;
+    
+    }
+    
+    body{
+
+      font-family: 'Oswald', sans-serif !important;
+      
+    }
+
+    .fontnav{
+
+      font-family: 'Oswald', sans-serif;
+    }
+
+    .listingstyle{
+
+      font-family: 'Oswald', sans-serif;
+      color:#555753FF;
+
+    }
+  
+   .listingstyle:hover{
+
+     
+      color:#EF2929FF;
+
+    }
+
+  .hover{
+    border: 1px solid #eee;
+    transition: all 300ms ease;
+  }
+  .hover:hover {
+    border: 1px solid #db3038;
+  }    
+  
+  .footer-distributed{
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+
+  padding: 55px 50px;
+  margin-top: 80px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+  width: 50%;
+  margin-top: 40px;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+  color:  #ffffff;
+  font: normal 36px 'Cookie', cursive;
+  margin: 0;
+}
+
+.footer-distributed h3 span{
+  color:  #5383d3;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+  color:  #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a{
+  display:inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+  color:  #8f9296;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+  width: 30%;
+  
+}
+
+.footer-distributed .footer-center i{
+  background-color:  #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+  display: inline-block;
+  color: #ffffff;
+  vertical-align: middle;
+  margin:0;
+}
+
+.footer-distributed .footer-center p span{
+  display:block;
+  font-weight: normal;
+  font-size:14px;
+  line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+  color:  #5383d3;
+  text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+
+
+.footer-distributed .footer-company-about{
+  line-height: 20px;
+  color:  #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+  display: block;
+  color:  #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+
+
+.footer-distributed .footer-icons a{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color:  #33383b;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+.social-icons{
+ 
+  display:inline-block;
+}
+
+.social-icons a{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color:  #33383b;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+  .footer-distributed{
+    font: bold 14px sans-serif;
+  }
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right{
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .footer-distributed .footer-center i{
+    margin-left: 0;
+  }
+
+}
+
+      .purple_background{
+        background: #0f2027; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #0f2027, #203a43, #2c5364); 
+      }
+      .sel_background{
+        min-height: 100vh !important;
+        background: url(https://picsum.photos/800/600?random);
+        background-size: cover;
+      }
+      .select2-container .select2-selection--single {
+          box-sizing: border-box;
+          cursor: pointer;
+          display: block;
+          height: 35px !important;
+          user-select: none;
+          -webkit-user-select: none;
+      }
+      .loading-overlay{
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100%;
+        z-index: 1229;
+
+      }
+      /* ckeditor height override */
+      .ck.ck-editor{
+        max-height: 400px;
+      }
+
+      /* override for tagsinput */
+      .bootstrap-tagsinput{
+        width: 100% !important;
+      }
+
+      .select2.select2-container{
+        width:100% !important;
+      }
+      
+      /* react toggle component */
+      .react-toggle {
+        touch-action: pan-x;
+
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        background-color: transparent;
+        border: 0;
+        padding: 0;
+
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      .react-toggle-screenreader-only {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+      }
+
+      .react-toggle--disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+        -webkit-transition: opacity 0.25s;
+        transition: opacity 0.25s;
+      }
+
+      .react-toggle-track {
+        width: 50px;
+        height: 24px;
+        padding: 0;
+        border-radius: 30px;
+        background-color: #4D4D4D;
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+      }
+
+      .react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
+        background-color: #000000;
+      }
+
+      .react-toggle--checked .react-toggle-track {
+        background-color: #19AB27;
+      }
+
+      .react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+        background-color: #128D15;
+      }
+
+      .react-toggle-track-check {
+        position: absolute;
+        width: 14px;
+        height: 10px;
+        top: 0px;
+        bottom: 0px;
+        margin-top: auto;
+        margin-bottom: auto;
+        line-height: 0;
+        left: 8px;
+        opacity: 0;
+        -webkit-transition: opacity 0.25s ease;
+        -moz-transition: opacity 0.25s ease;
+        transition: opacity 0.25s ease;
+      }
+
+      .react-toggle--checked .react-toggle-track-check {
+        opacity: 1;
+        -webkit-transition: opacity 0.25s ease;
+        -moz-transition: opacity 0.25s ease;
+        transition: opacity 0.25s ease;
+      }
+
+      .react-toggle-track-x {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        top: 0px;
+        bottom: 0px;
+        margin-top: auto;
+        margin-bottom: auto;
+        line-height: 0;
+        right: 10px;
+        opacity: 1;
+        -webkit-transition: opacity 0.25s ease;
+        -moz-transition: opacity 0.25s ease;
+        transition: opacity 0.25s ease;
+      }
+
+      .react-toggle--checked .react-toggle-track-x {
+        opacity: 0;
+      }
+
+      .react-toggle-thumb {
+        transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+        position: absolute;
+        top: 1px;
+        left: 1px;
+        width: 22px;
+        height: 22px;
+        border: 1px solid #4D4D4D;
+        border-radius: 50%;
+        background-color: #FAFAFA;
+
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+
+        -webkit-transition: all 0.25s ease;
+        -moz-transition: all 0.25s ease;
+        transition: all 0.25s ease;
+      }
+
+      .react-toggle--checked .react-toggle-thumb {
+        left: 27px;
+        border-color: #19AB27;
+      }
+
+      .react-toggle--focus .react-toggle-thumb {
+        -webkit-box-shadow: 0px 0px 3px 2px #0099E0;
+        -moz-box-shadow: 0px 0px 3px 2px #0099E0;
+        box-shadow: 0px 0px 2px 3px #0099E0;
+      }
+
+      .react-toggle:active:not(.react-toggle--disabled) .react-toggle-thumb {
+        -webkit-box-shadow: 0px 0px 5px 5px #0099E0;
+        -moz-box-shadow: 0px 0px 5px 5px #0099E0;
+        box-shadow: 0px 0px 5px 5px #0099E0;
+      }
+
+    </style>
+  
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <!-- jquery -->
+    <script src="%PUBLIC_URL%/libraries/jQuery-2.1.4.min.js"></script>
+
+    <!-- bootstrap js -->
+    <script src="%PUBLIC_URL%/bootstrap/js/bootstrap.min.js"></script>
+    
+    <!-- adminlte js -->
+    <script src="%PUBLIC_URL%/dist/js/adminlte.min.js"></script>
+
+    <!-- select 2 -->
+    <link href="%PUBLIC_URL%/plugins/select2/select2.min.css" rel="stylesheet" />
+
+    <script src="%PUBLIC_URL%/plugins/select2/select2.min.js"></script>
+    
+    <!-- date picker -->
+    <link rel="stylesheet" href="%PUBLIC_URL%/plugins/datepicker/datepicker3.css">
+    <script src="%PUBLIC_URL%/plugins/datepicker/bootstrap-datepicker.js"></script>
+
+    <!-- tagsinput -->
+    <link rel="stylesheet" href="%PUBLIC_URL%/tagsinput/tagsinput.css">
+    <script src="%PUBLIC_URL%/tagsinput/tagsinput.min.js"></script>
+
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+
+    
+</body>
+</html>
